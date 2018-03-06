@@ -158,8 +158,8 @@ def turtle_graph_program():
     r3 = tkinter.Radiobutton(tk, text="Fast", variable=var2, value=3)
     r4 = tkinter.Radiobutton(tk, text="Slow", variable=var2, value=4)
     progress = Progressbar(tk,orient=HORIZONTAL,length=200,mode='determinate')
-    b1 = button(text="Draw", command = chk_num)
-    b2 = button(text="Reset", command = turtle_reset)
+    b1 = button(text="Draw", bg = "green", command = chk_num)
+    b2 = button(text="Reset", bg = "red", command = turtle_reset)
     # The Gui
     tk.resizable(False, False)
     tk.update_idletasks()
