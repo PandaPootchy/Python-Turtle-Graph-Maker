@@ -3678,7 +3678,6 @@ class _Screen(TurtleScreen):
             _Screen._root = self._root = _Root()
             self._root.title(_Screen._title)
             self._root.iconbitmap('turtle.ico')
-            self._root.overrideredirect(True)
             self._root.ondestroy(self._destroy)
         if _Screen._canvas is None:
             width = _CFG["width"]
