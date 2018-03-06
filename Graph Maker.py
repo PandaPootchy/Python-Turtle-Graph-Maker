@@ -190,7 +190,6 @@ def turtle_graph_program():
     space.grid(column=0,row=10)
     
     tk.mainloop()
-
     
 def starting():
     # Starts the main program
