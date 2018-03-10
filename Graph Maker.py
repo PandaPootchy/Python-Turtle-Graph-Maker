@@ -53,14 +53,14 @@ def turtle_graph_program():
     
     def chk_num():
         # Checks to see if user has input anythin
-        box_width = e1.get()
+        box_length = e1.get()
         box_height = e2.get()
         col = e3.get()
         row = e4.get()
         
-        if box_width == '':
+        if box_length == '':
             messagebox.showerror("Error", "You did not enter a value!")
-        elif box_width == '':
+        elif box_height == '':
             messagebox.showerror("Error", "You did not enter a value!")
         elif col == '':
             messagebox.showerror("Error", "You did not enter a value!")
@@ -70,24 +70,24 @@ def turtle_graph_program():
             max_num()
     def max_num():
         # If max number is reached then a error window pops up
-            box_width = int(e1.get())
+            box_length = int(e1.get())
             box_height = int(e2.get())
             col = int(e3.get())
             row = int(e4.get())
             
-            if box_width in range(200):
+            if box_length in range(200):
                 if box_height in range(200):
                     if col in range(200):
                         if row in range(200):
                             speed_test()
                         else:
-                            messagebox.showerror("Error", "Box length number too big!")
+                            messagebox.showerror("Error", "Row number too big!")
                     else:
-                        messagebox.showerror("Error", "Box height number too big!")
+                        messagebox.showerror("Error", "Collum number too big!")
                 else:
-                    messagebox.showerror("Error", "Collum number too big!")
+                    messagebox.showerror("Error", "Box height number too big!")
             else:
-                messagebox.showerror("Error", "Row number too big!")
+                messagebox.showerror("Error", "Box length number too big!")
                 
     def turtle_reset():
         # Clears the screen and resets the turtles position
@@ -114,7 +114,7 @@ def turtle_graph_program():
             
     def graph_draw():
         # Test for if user has pressed yes or no
-        box_width = int(e1.get())
+        box_length = int(e1.get())
         box_height = int(e2.get())
         col = int(e3.get())
         row = int(e4.get())
@@ -123,14 +123,14 @@ def turtle_graph_program():
             b1.config(state = DISABLED)
             b2.config(state = DISABLED)
             progress.config(maximum=col*row+1)
-            centergraph(col, row, box_width, box_height)
+            centergraph(col, row, box_length, box_height)
             b1.config(state = NORMAL)
             b2.config(state = NORMAL)
         elif value == 2:
             b1.config(state = DISABLED)
             b2.config(state = DISABLED)
             progress.config(maximum=col*row+1)
-            graph(col, row, box_width, box_height)
+            graph(col, row, box_length, box_height)
             b1.config(state = NORMAL)
             b2.config(state = NORMAL)
         elif value == 0:
@@ -163,7 +163,7 @@ def turtle_graph_program():
     tk.protocol('WM_DELETE_WINDOW', turtle_exit)
     tk.iconbitmap('turtle.ico')
     title("Make A Graph")
-    label(text="Enter box width: ").grid(column=0, row=0, sticky=W)
+    label(text="Enter box length: ").grid(column=0, row=0, sticky=W)
     e1.grid(column=1, row=0)
     label(text="Enter box height: ").grid(column=0, row=1, sticky=W)
     e2.grid(column=1, row=1)
