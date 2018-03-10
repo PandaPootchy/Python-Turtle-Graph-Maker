@@ -60,17 +60,14 @@ def turtle_graph_program():
         
         if box_width == '':
             messagebox.showerror("Error", "You did not enter a value!")
+        elif box_width == '':
+            messagebox.showerror("Error", "You did not enter a value!")
+        elif col == '':
+            messagebox.showerror("Error", "You did not enter a value!")
+        elif row == '':
+            messagebox.showerror("Error", "You did not enter a value!")
         else:
-            if box_width == '':
-                messagebox.showerror("Error", "You did not enter a value!")
-            else:
-                if col == '':
-                    messagebox.showerror("Error", "You did not enter a value!")
-                else:
-                    if row == '':
-                        messagebox.showerror("Error", "You did not enter a value!")
-                    else:
-                        max_num()
+            max_num()
     def max_num():
         # If max number is reached then a error window pops up
             box_width = int(e1.get())
@@ -79,18 +76,18 @@ def turtle_graph_program():
             row = int(e4.get())
             
             if box_width in range(200):
-                if box_width in range(200):
+                if box_height in range(200):
                     if col in range(200):
                         if row in range(200):
                             speed_test()
                         else:
-                            messagebox.showerror("Error", "Number too big!")
+                            messagebox.showerror("Error", "Box length number too big!")
                     else:
-                        messagebox.showerror("Error", "Number too big!")
+                        messagebox.showerror("Error", "Box height number too big!")
                 else:
-                    messagebox.showerror("Error", "Number too big!")
+                    messagebox.showerror("Error", "Collum number too big!")
             else:
-                messagebox.showerror("Error", "Number too big!")
+                messagebox.showerror("Error", "Row number too big!")
                 
     def turtle_reset():
         # Clears the screen and resets the turtles position
